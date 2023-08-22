@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --color-blue: #3498DB;
+    --color-green: #48C9B0;
+    --color-white: #fff;
+    --color-gray: #e4e4e4;
+    --color-black: #333;
+    --color-dark-gray:#888888;
+  }
+
+h1, h2, h3, h4, h5 {
+    margin: 0;
+    padding: 0;
+    color: #212121;
+}
+
+header {
+    height: 6rem;
+    background-color: var(--color-green);
+    color: var(--color-white);
+    padding: 2rem;
+}
+
+header > * {
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.filter {
+    display: block;
+    height: 3.5rem;
+    background-color: var(--color-blue);
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.filter-block > i {
+    padding: 5px;
+    background: var(--color-white);
+    color: var(--color-gray);
+    min-width: 50px;
+    text-align: center;
+    border-radius: 3px;
+}
+
+.filter-block > i:hover {
+    color: var(--color-dark-gray);
+}
+
+
+.filter-block i > * {
+    margin-left: 10px;
+    border: none;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+i > *:focus {
+    outline: none;
+}
+
+@media all and (max-width: 949px) {
+
+    .box-shadow-menu {
+        position: relative;
+        float: right;
+        margin-right: 1em;
+        cursor: pointer;
+        z-index: 2;
+    }
+
+    .box-shadow-menu:before {
+        content: "";
+        position: absolute;
+        margin-top: 1.2em;
+        right: 0;
+        width: 1em;
+        height: 0.125em;
+        border-top: 0.375em double var(--color-white);
+        border-bottom: 0.125em solid var(--color-white);
+    }
+
+    .filter-container {
+        position: relative;
+        z-index: 1;
+        background-color: var(--color-blue);
+        padding: 1rem;
+        display: none;
+    }
+    
+    .filter-block {
+        position: relative;
+        display: block;
+        margin: 1rem;
+        width: 100%;
+    }
+
+    .filter-block > i {
+        position: relative;
+        width: 60%;
+        margin: 0 auto;
+    }
+}
+
+@media all and (min-width: 950px) {
+    .box-shadow-menu {
+        display: none;
+    }
+
+    .filter-container {
+        display: block;
+        position: relative;
+        margin: 0 auto;
+        height: 2.5rem;
+        display: flex;
+    }
+    
+    .filter-block {
+        position: relative;
+        margin: 0 auto;
+        border: 2px;
+        line-height: 3.5rem;
+        text-align: center;
+    }
+
+    .filter-block > i {
+        min-width: 100%;
+    }
+}
+
+.container {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.content {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    position: relative;
+    margin: 10px;
+    display: flex;
+    flex-flow: column;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-gray);
+}
+
+@media (max-width: 824px) {
+    .card {
+        flex: 0 1 calc(100% - 20px);
+    }
+}
+
+@media (min-width: 825px) and (max-width: 949px) {
+    .card {
+        flex: 0 1 calc(49.5% - 20px);
+    }
+}
+
+@media (min-width: 950px) {
+    .card {
+        flex: 0 1 calc(33% - 20px);
+    }
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card img {
+    width: 100%;
+}
+
+.card .card-content .title {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--color-black);
+}
+
+.card .card-content .description {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    color: var(--color-black);
+}
+
+.data {
+    padding: 0;
+    margin-bottom: 0.5rem;
+}
+
+.inline {
+    display: inline-block;
+}
+
+.data i {
+    background-color: var(--color-blue);
+    color: var(--color-white);
+    border-radius: 3px 0px 0px 3px;
+    padding: 6px;
+    margin-right: 0;
+    font-size: 14px;
+}
+
+.data label {
+    padding: 5.5px;
+    background-color: var(--color-gray);
+    margin-left: 0;
+    border-radius: 0px 3px 3px 0px;
+    font-size: 0.9rem;
+}
+
+.price {
+    background-color: var(--color-blue);
+    padding: 4px;
+    border-radius: 3px;
+    color: var(--color-white);
+    margin-left: 10px;
+    margin-bottom: 2em;
+}
+
+.price i {
+    border: none;
+    margin-left: 2px;
+    margin-right: 2px;
+    font-size: 14px;
+}
+
+.price i:first-child {
+    margin-left: 10px;
+}
+
+.price i:last-child {
+    margin-right: 10px;
+}
+
+.opacity {
+    opacity: 0.5;
+}
+
+.card-btn {
+    position: absolute;
+    color: var(--color-white);
+    background-color: var(--color-green);
+    height: 3rem;
+    text-align: center;
+    line-height: 3rem;
+    cursor: pointer;
+    width: 100%;
+    bottom: 0;
+}
